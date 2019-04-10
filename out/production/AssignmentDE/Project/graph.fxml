@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" prefHeight="598.0" prefWidth="747.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <TabPane prefHeight="572.0" prefWidth="670.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Methods">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="339.0" prefWidth="475.0">
+                     <children>
+                        <TextField layoutX="52.0" layoutY="101.0" prefHeight="31.0" prefWidth="61.0" fx:id="x0" />
+                        <TextField fx:id="X" layoutX="52.0" layoutY="132.0" prefHeight="31.0" prefWidth="61.0" />
+                        <TextField fx:id="y0" layoutX="52.0" layoutY="163.0" prefHeight="31.0" prefWidth="61.0" />
+                        <TextField fx:id="n" layoutX="52.0" layoutY="194.0" prefHeight="31.0" prefWidth="61.0" />
+                        <Label layoutX="25.0" layoutY="137.0" text="X" />
+                        <Label layoutX="22.0" layoutY="106.0" text="x0" />
+                        <Label layoutX="21.0" layoutY="168.0" text="y0" />
+                        <Label layoutX="24.0" layoutY="199.0" text="n" />
+                        <LineChart fx:id="graph" layoutX="146.0" layoutY="51.0">
+                          <xAxis>
+                            <NumberAxis side="BOTTOM" fx:id="x" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="y" side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                        <Button fx:id="methods" layoutX="33.0" layoutY="242.0" mnemonicParsing="false" text="Compute" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Local Error">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <LineChart fx:id="graph_l_e" layoutX="92.0" layoutY="53.0">
+                          <xAxis>
+                            <NumberAxis side="BOTTOM" fx:id="x" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="y" side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Global Error">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="n0" layoutX="61.0" layoutY="65.0" prefHeight="31.0" prefWidth="61.0" />
+                        <TextField fx:id="N" layoutX="61.0" layoutY="96.0" prefHeight="31.0" prefWidth="61.0" />
+                        <Label layoutX="36.0" layoutY="70.0" text="n0" />
+                        <Label layoutX="36.0" layoutY="101.0" text="N" />
+                        <LineChart fx:id="graph_g_e" layoutX="133.0" layoutY="38.0">
+                          <xAxis>
+                            <NumberAxis side="BOTTOM" fx:id="x" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="y" side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                        <Button fx:id="global_errors" layoutX="42.0" layoutY="157.0" mnemonicParsing="false" text="Compute" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</GridPane>
